@@ -28,6 +28,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "app2",
       library: { type: "var", name: "app2" },
+      // remotes，可选，表示作为 Host 时，去消费哪些 Remote；
       remotes: {
         app1: "app1",
       },
